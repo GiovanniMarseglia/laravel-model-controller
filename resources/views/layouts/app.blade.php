@@ -10,6 +10,23 @@
 
     <!-- header -->
 
-    <h1>{{dd($movie[0]["title"])}}</h1>
+
+
+    <div class="container">
+
+        <div class="row row-cols-3 g-5 mt-3 d-flex justify-content-center">
+            @foreach ( $movie as $element)
+            <div class="col d-flex flex-column">
+                <div class="bg-primary text-center rounded" style="height: 250px">
+                    <h1>{{$element["title"]}}</h1>
+                    <h2>{{$element["nationality"]}}</h2>
+                    <h3>{{$element["date"]}}</h3>
+                    <h4>{{$element["vote"]}}</h4>
+                </div>
+            </div>
+            @endforeach
+        </div>
+
+    </div>
 </body>
 </html>
